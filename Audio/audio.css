@@ -1,0 +1,28 @@
+.button {
+    padding: 20px 40px; 
+    font-size: 32px;  
+    border: none;
+    border-radius: 10px; 
+    cursor: pointer;
+    margin: 10px;
+    transition: transform 0.3s; 
+}
+.button:active {
+    transform: scale(0.95);  
+}
+
+.dog, .pig, .cat, .snake, .rabbit {
+    font-family: 'Courier New', Courier, monospace; 
+    width: 250px; 
+    height: 60px; 
+}
+
+
+.dog { background-color: #a52a2a; }
+.pig { background-color: #ffc0cb; }
+.car { background-color: yellow; }
+.snake { background-color: #228b22; }
+.rabbit { background-color: #808080; }
+    body{
+        background-color: beige ;
+    }
