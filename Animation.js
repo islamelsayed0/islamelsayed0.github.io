@@ -9,7 +9,7 @@ var img = new Image(); // Create new img element
 img.onload = function() {
     animate(this);
 };
-    img.src = 'IMG/spritesheet.png'; // Set source path
+    img.src = 'assets/spritesheet.png'; // Set source path
 
     var xPos = 0;
 
