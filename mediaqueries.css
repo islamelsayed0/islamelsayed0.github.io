@@ -1,53 +1,101 @@
 @media screen and (max-width: 1400px) {
-    #profile {
-      height: 83vh;
-      margin-bottom: 6rem;
-    }
-    .about-containers {
-      flex-wrap: wrap;
-    }
-    #contact,
-    #projects {
-      height: fit-content;
-    }
+  #profile {
+    height: 83vh;
+    margin-bottom: 6rem;
+  }
+  .about-containers {
+    flex-wrap: wrap;
+  }
+  #contact,
+  #projects {
+    height: fit-content;
+  }
+
+  .details-container.color-container {
+    min-height: 400px;
   }
   
-  @media screen and (max-width: 1200px) {
-    #desktop-nav {
-      display: none;
-    }
-    #hamburger-nav {
-      display: flex;
-    }
-    #experience,
-    .experience-details-container {
-      margin-top: 2rem;
-    }
-    #profile,
-    .section-container {
-      display: block;
-    }
-    .arrow {
-      display: none;
-    }
-    section,
-    .section-container {
-      height: fit-content;
-    }
-    section {
-      margin: 0 5%;
-    }
-    .section__pic-container {
-      width: 275px;
-      height: 275px;
-      margin: 0 auto 2rem;
-    }
-    .about-containers {
-      margin-top: 0;
-    }
+  .article-container {
+    height: 220px;
   }
   
-  @media screen and (max-width: 600px) {
+  .project-description {
+    font-size: 0.9rem;
+    margin: 1rem;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #desktop-nav {
+    display: none;
+  }
+  #hamburger-nav {
+    display: flex;
+  }
+  #experience,
+  .experience-details-container {
+    margin-top: 2rem;
+  }
+  #profile,
+  .section-container {
+    display: block;
+  }
+  .arrow {
+    display: none;
+  }
+  section,
+  .section-container {
+    height: fit-content;
+  }
+  .section__pic-container {
+    width: 275px;
+    height: 275px;
+    margin: 0 auto 2rem;
+  }
+  .about-containers {
+    margin-top: 0;
+  }
+}
+  
+@media screen and (max-width: 1000px) {
+  section {
+    margin: 0 5%;
+    padding: 5rem 0;
+  }
+
+  #experience,
+  #projects {
+    margin-top: 3rem;
+    padding-top: 3rem;
+  }
+
+  .experience-details-container {
+    margin-bottom: 3rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  section {
+    margin: 0 2rem;
+    padding: 4rem 0;
+  }
+
+  #experience {
+    margin-top: 4rem;
+    padding-top: 4rem;
+  }
+
+  #projects {
+    margin-top: 5rem;
+    padding-top: 4rem;
+  }
+
+  .experience-details-container {
+    margin-bottom: 4rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
     #contact,
     footer {
       height: 40vh;
@@ -56,9 +104,26 @@
       height: 83vh;
       margin-bottom: 0;
     }
-    article {
-      font-size: 1rem;
-    }
+  article {
+    font-size: 1rem;
+  }
+  
+  .project-title {
+    font-size: 1.25rem;
+  }
+  
+  .details-container.color-container {
+    min-height: 350px;
+  }
+  
+  .article-container {
+    height: 180px;
+  }
+  
+  .project-description {
+    font-size: 0.85rem;
+    margin: 0.75rem;
+  }
     footer nav {
       height: fit-content;
       margin-bottom: 2rem;
@@ -68,10 +133,26 @@
     .btn-container {
       flex-wrap: wrap;
     }
-    .contact-info-container {
-      margin: 0;
+    .contact-info-upper-container {
+      padding: 1.5rem;
+      width: 85%;
     }
+    
+    .contact-info-container {
+      padding: 0.75rem;
+      gap: 0.75rem;
+    }
+    
     .contact-info-container p,
+    .contact-info-container a {
+      font-size: 1rem;
+    }
+    
+    .contact-icon,
+    .email-icon {
+      height: 2rem;
+    }
+    
     .nav-links li a {
       font-size: 1rem;
     }
