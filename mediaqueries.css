@@ -75,18 +75,20 @@
     margin-bottom: 3rem;
   }
 
-  /* Added button adjustments for tablet */
+  /* Button adjustments for tablet */
   .btn-container {
+    display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
     justify-content: center;
+    gap: 1.5rem;
+    margin: 1rem 0;
   }
 
   .btn {
     width: auto;
-    min-width: 10rem;
-    padding: 1rem 1.5rem;
-    white-space: nowrap;
+    min-width: 12rem;
+    padding: 1rem 2rem;
+    font-size: 1rem;
   }
 }
 
@@ -109,6 +111,16 @@
   .experience-details-container {
     margin-bottom: 4rem;
   }
+
+  /* Button adjustments for smaller tablets */
+  .btn-container {
+    padding: 0 1rem;
+  }
+
+  .btn {
+    min-width: 11rem;
+    padding: 1rem 1.5rem;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -123,18 +135,24 @@
   
   /* Button container and button adjustments for mobile */
   .btn-container {
+    display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 1rem;
     width: 100%;
-    padding: 0 1rem;
+    max-width: 400px;
+    margin: 1rem auto;
+    padding: 0;
   }
 
   .btn {
     width: 100%;
-    max-width: 350px;
+    min-width: 0;
+    max-width: none;
     padding: 1rem;
-    margin: 0 auto;
-    font-size: 0.9rem;
+    font-size: 1rem;
+    text-align: center;
+    box-sizing: border-box;
   }
   
   /* Fixed article and experience section layout */
