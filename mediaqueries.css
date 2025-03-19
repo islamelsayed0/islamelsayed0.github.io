@@ -75,6 +75,34 @@
     margin-bottom: 3rem;
   }
 
+  /* Experience section fixes for larger tablets */
+  #experience .about-containers {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    width: 100%;
+  }
+
+  #experience .details-container {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  #experience .article-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 2rem;
+    height: auto;
+  }
+
+  #experience article {
+    width: auto;
+    min-width: 10rem;
+    display: flex;
+    align-items: center;
+  }
+
   /* Button adjustments for tablet */
   .btn-container {
     display: flex;
@@ -110,6 +138,36 @@
 
   .experience-details-container {
     margin-bottom: 4rem;
+  }
+
+  /* Experience section fixes for tablet */
+  #experience .about-containers {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  #experience .details-container {
+    width: auto;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+  #experience .article-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 1.5rem;
+    height: auto;
+    padding: 0.5rem;
+  }
+
+  #experience article {
+    width: auto;
+    min-width: 8rem;
+    display: flex;
+    align-items: center;
+    margin: 0.25rem;
   }
 
   /* Button adjustments for smaller tablets */
