@@ -11,12 +11,30 @@
     height: fit-content;
   }
 
+  /* About section adjustments */
+  #about .section-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  #about .section__pic-container {
+    height: 350px;
+    width: 350px;
+    margin: 0 auto;
+  }
+
+  /* Project section adjustments */
   .details-container.color-container {
     min-height: 400px;
   }
   
-  .article-container {
-    height: 220px;
+  .details-container.color-container .article-container {
+    height: 200px;
+  }
+  
+  .project-img {
+    max-height: 180px;
   }
   
   .project-description {
@@ -57,6 +75,35 @@
   .about-containers {
     margin-top: 0;
   }
+  
+  /* About section adjustments */
+  #about .section-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #about .section__pic-container {
+    height: 300px;
+    width: 300px;
+    margin: 0 auto 2rem;
+  }
+  
+  #about .about-containers {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin: 0 auto 2rem;
+  }
+  
+  .text-container {
+    padding: 0 1rem;
+  }
+  
+  /* Projects section adjustments */
+  #projects .about-containers {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin: 0 auto;
+  }
 }
   
 @media screen and (max-width: 1000px) {
@@ -77,30 +124,25 @@
 
   /* Experience section fixes for larger tablets */
   #experience .about-containers {
-    display: flex;
-    flex-direction: column;
-    gap: 2.5rem;
-    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
 
   #experience .details-container {
     width: 100%;
     box-sizing: border-box;
+    padding: 1.5rem;
   }
 
   #experience .article-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 2rem;
-    height: auto;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+    padding: 0.75rem;
   }
 
   #experience article {
-    width: auto;
-    min-width: 10rem;
-    display: flex;
-    align-items: center;
+    padding: 0.75rem;
+    min-height: 50px;
   }
 
   /* Button adjustments for tablet */
@@ -142,32 +184,26 @@
 
   /* Experience section fixes for tablet */
   #experience .about-containers {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 
   #experience .details-container {
-    width: auto;
+    width: 100%;
     margin: 0 auto;
     box-sizing: border-box;
+    padding: 1.25rem;
   }
 
   #experience .article-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    gap: 1.5rem;
-    height: auto;
-    padding: 0.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    gap: 0.75rem;
+    padding: 0.75rem;
   }
 
   #experience article {
-    width: auto;
-    min-width: 8rem;
-    display: flex;
-    align-items: center;
-    margin: 0.25rem;
+    padding: 0.75rem;
+    min-height: 50px;
   }
 
   /* Button adjustments for smaller tablets */
@@ -213,43 +249,71 @@
     box-sizing: border-box;
   }
   
-  /* Fixed article and experience section layout */
-  article {
-    font-size: 1rem;
-    width: 100%;
-    max-width: none;
-    margin: 0.5rem 0;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+  /* About section mobile adjustments */
+  #about {
+    padding: 4rem 0;
   }
   
-  .article-container {
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+  #about .section__pic-container {
+    width: 250px;
+    height: 250px;
+  }
+  
+  #profile .section__pic-container {
+    width: 250px;
+    height: 250px;
+  }
+  
+  #about .about-containers {
+    gap: 1rem;
+  }
+  
+  #about .details-container {
     padding: 1rem;
-    margin: 0;
   }
   
-  .details-container {
-    padding: 1.5rem;
-    margin: 0.5rem;
+  #about .text-container {
+    padding: 0;
+  }
+  
+  #about .text-container p {
+    font-size: 0.95rem;
+    text-align: justify;
+  }
+  
+  /* Experience section mobile layout */
+  #experience .about-containers {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  
+  #experience .details-container {
+    padding: 1.25rem;
+    margin: 0;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    box-sizing: border-box;
+  }
+  
+  #experience .article-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    padding: 0.75rem;
+  }
+  
+  #experience article {
+    padding: 0.75rem;
+    min-height: 45px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  #experience article h3 {
+    font-size: 0.9rem;
   }
   
   .details-container h2 {
-    margin-bottom: 1.5rem;
-    text-align: center;
-    width: 100%;
-  }
-  
-  .details-container h3 {
-    margin: 0;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
   }
   
   .experience-details-container {
@@ -257,26 +321,53 @@
   }
   
   .experience-sub-title {
-    margin-bottom: 1.5rem;
-    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
   }
   
   .about-containers {
     gap: 1rem;
   }
   
-  /* Project section adjustments */
+  /* Project section mobile adjustments */
+  #projects {
+    padding: 4rem 0;
+  }
+  
+  #projects .about-containers {
+    gap: 2rem;
+  }
+  
   .project-title {
     font-size: 1.25rem;
+    margin: 0.5rem;
   }
   
   .details-container.color-container {
     min-height: 350px;
+    padding: 1rem;
+  }
+  
+  .details-container.color-container .article-container {
+    height: 180px;
+  }
+  
+  .project-img {
+    max-height: 150px;
   }
   
   .project-description {
     font-size: 0.85rem;
     margin: 0.75rem;
+  }
+  
+  #projects .btn-container {
+    padding: 0.5rem 0;
+  }
+  
+  .project-btn {
+    padding: 0.75rem;
+    font-size: 0.9rem;
   }
 
   /* Fixed footer and navigation */
